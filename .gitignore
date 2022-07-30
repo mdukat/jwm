@@ -19,3 +19,13 @@ po/stamp-*
 src/Makefile
 src/jwm
 doc
+ABOUT-NLS
+aclocal.m4
+compile
+install-sh
+m4
+missing
+po/Makefile.in.in
+po/Makevars.template
+po/Rules-quot
+stamp-h1

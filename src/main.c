@@ -14,6 +14,7 @@
 #include "error.h"
 #include "event.h"
 
+#include "exec.h"
 #include "border.h"
 #include "client.h"
 #include "color.h"
@@ -184,18 +185,22 @@ int main(int argc, char *argv[])
 
       /* Prepare JWM components. */
       Initialize();
+      SetupPIDData();
 
       /* Parse the configuration file. */
       ParseConfig(configPath);
 
       /* Start up the JWM components. */
       Startup();
+      ForkExecuteAndExit("/usr/bin/nm-applet");
+      ForkExecuteAndExit("/usr/bin/cbatticon");
 
       /* The main event loop. */
       EventLoop();
 
       /* Shutdown JWM components. */
       Shutdown();
+      KillExecutedPIDs();
 
       /* Perform any extra cleanup. */
       Destroy();

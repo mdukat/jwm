@@ -20,6 +20,12 @@ the following libraries:
  - libXinerama for multiple head support.
  - libXpm for XPM icons and backgrounds.
 
+Packages needed under Debian
+------------------------------------------------------------------------------
+```
+build-essential automake autopoint gettext libxpm-dev libcairo2-dev librsvg2-dev libpango1.0-dev libxext-dev libxrender-dev libxmu-dev libx11-dev
+```
+
 Installation
 ------------------------------------------------------------------------------
 
